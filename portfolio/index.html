@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Meu portfólio - Aline Bevilacqua">
+        <meta name="author" content="Aline Bevilacqua">
+        <link rel="icon" href="#" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+        <link rel="stylesheet" href="./src/css/style.css">
+        <title>Meu portfólio - Aline Bevilacqua</title>
+    </head>
+
+    <body>
+        <header id="header">
+            <p class="header__logo">AB</p>
+            <button class="header__dark-light-switch" aria-label="Dark/Light switch">
+                <i class="fi fi-sr-brightness button__light"></i>
+                <i class="fi fi-sr-moon-stars button__dark"></i>
+            </button>
+            <button class="header__burger-menu" aria-label="Menu toggle">
+                <i class="fi fi-sr-menu-burger"></i>
+                <i class="fi fi-sr-cross"></i>
+            </button>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#header">Home</a></li>
+                    <li class="header__nav-item"><a href="#about-me">Sobre mim</a></li>
+                    <li class="header__nav-item"><a href="#skills">Skills</a></li>
+                    <li class="header__nav-item"><a href="#projects">Projetos</a></li>
+                    <li class="header__nav-item"><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="home">
+                <div class="home__socials">
+                    <a href="http://www.linkedin.com/in/aline-bevilacqua" target="_blank" rel="noopener"
+                        aria-label="Linkedin link">
+                        <i class="fi fi-brands-linkedin"></i>
+                    </a>
+                    <a href="http://github.com/aliine98" target="_blank" rel="noopener" aria-label="Github link">
+                        <i class="fi fi-brands-github"></i>
+                    </a>
+                </div>
+                <div class="home__perfil-img">
+                    <img src="#" alt="">
+                </div>
+                <h1 class="home__title">Olá! Meu nome é Aline Bevilacqua e sou uma <span
+                        class="home__title--highlight">Desenvolvedora Web Front-end!</span></h1>
+                <a href="../index.html" target="_blank" rel="noopener noreferrer"
+                    class="home__online-cv-button">Currículo Online</a>
+                <a href="./src/assets/curriculo(2p).pdf" target="_blank" rel="noopener noreferrer" download="Curriculo"
+                    class="home__cv-download-button">Download currículo em PDF <i class="fi fi-sr-download"></i></a>
+            </section>
+            <section id="about-me">
+                <h2 class="about-me__title">Sobre mim</h2>
+                <img src="#" alt="" class="about-me__img">
+                <p class="about-me__description">
+                    Sou uma profissional dedicada, determinada, que gosta muito de aprender e visa sempre entregar o
+                    melhor. Me apaixonei
+                    pela programação por estimular a criatividade, adoro como posso resolver uma coisa de várias
+                    maneiras diferentes! Tenho
+                    conhecimento em Javascript, Typescript, HTML, CSS e Git, e continuo estudando e me aprimorando.
+                </p>
+            </section>
+            <section id="skills">
+                <h2 class="skills__title">Skills</h2>
+                <ul class="skills__list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Typescript</li>
+                    <li>Git</li>
+                    <li>Java</li>
+                    <li>MySQL</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <h2 class="projects__title">Projetos</h2>
+                <div class="projects-container">
+                    <a href="#" aria-label="Previous"><i class="fi fi-sr-angle-left"></i></a>
+                    <ul class="projects__list">
+                        <li>
+                            <h3>Mulheres da
+                                história de tecnologia</h3>
+                            <p>Atividade da aula 4 da turma 5 do Elas Na Tech 2023. Um html sobre as mulheres
+                                importantes na história da tecnologia.</p>
+                            <a href="../aula-4/index.html" target="_blank" rel="noopener">Deploy</a>
+                        </li>
+                        <li>
+                            <h3>Currículo
+                                Online</h3>
+                            <p>Atividade da aula 6 da turma 5 do Elas Na Tech 2023. Meu currículo online feito com
+                                HTML e CSS.</p>
+                            <a href="../index.html" target="_blank" rel="noopener">Deploy</a>
+                        </li>
+                        <li>
+                            <h3>Cardápio></h3>
+                            <p>Atividade da aula 7 da turma 5 do Elas Na Tech 2023. Um site de cardápio simples
+                                feito com HTML e CSS.</p>
+                            <a href="../aula-7-cardapio/index.html" target="_blank" rel="noopener">Deploy</a>
+                        </li>
+                    </ul>
+                    <a href="#" aria-label="Next"><i class="fi fi-sr-angle-right"></i></a>
+                </div>
+            </section>
+            <section id="contact">
+                <h2 class="contact__title">Fale comigo</h2>
+                <form action="" class="contact__form">
+                    <label for="name">Nome:</label>
+                    <input type="text" placeholder="Nome" id="name">
+                    <label for="email">Seu email:</label>
+                    <input type="email" placeholder="E-mail" id="email">
+                    <label for="message">Mensagem:</label>
+                    <textarea cols="30" rows="10" placeholder="Mensagem" id="message"></textarea>
+                    <button type="submit" class="contact__form-button">Enviar</button>
+                </form>
+            </section>
+        </main>
+        <footer id="footer">
+            <p class="footer__copyright">Desenvolvido com ❤ por Aline Bevilacqua &copy; 2023</p>
+        </footer>
+        <a href="#header" class="scroll-to-top" aria-label="Scroll to top">
+            <i class="fi fi-sr-arrow-square-up"></i>
+        </a>
+    </body>
+
+</html>
