@@ -9,24 +9,30 @@
         <link rel="icon" href="#" type="image/x-icon">
         <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
         <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Amarante&family=Baumans&family=Charm:wght@700&family=Cinzel+Decorative:wght@400;700&family=Oleo+Script+Swash+Caps&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Uncial+Antiqua&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="./src/css/style.css">
         <title>Meu portfólio - Aline Bevilacqua</title>
     </head>
 
-    <body>
-        <header id="header">
+    <body id="home">
+        <header class="header">
             <p class="header__logo">AB</p>
-            <button class="header__dark-light-switch" aria-label="Dark/Light switch">
-                <i class="fi fi-sr-brightness button__light"></i>
-                <i class="fi fi-sr-moon-stars button__dark"></i>
+            <button class="btn header__dark-light-switch" aria-label="Dark/Light switch">
+                <i class="fi fi-sr-brightness"></i>
+                <i class="fi fi-sr-moon-stars"></i>
             </button>
-            <button class="header__burger-menu" aria-label="Menu toggle">
+            <div class="nav-overlay"></div>
+            <button class="btn header__burger-menu" aria-label="Menu toggle">
                 <i class="fi fi-sr-menu-burger"></i>
                 <i class="fi fi-sr-cross"></i>
             </button>
             <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#header">Home</a></li>
+                    <li class="header__nav-item"><a href="#home">Home</a></li>
                     <li class="header__nav-item"><a href="#about-me">Sobre mim</a></li>
                     <li class="header__nav-item"><a href="#skills">Skills</a></li>
                     <li class="header__nav-item"><a href="#projects">Projetos</a></li>
@@ -84,21 +90,19 @@
                     <a href="#" aria-label="Previous"><i class="fi fi-sr-angle-left"></i></a>
                     <ul class="projects__list">
                         <li>
-                            <h3>Mulheres da história de tecnologia</h3>
-                            <p>Atividade da aula 4 da turma 5 do Elas Na Tech 2023. Um html sobre as mulheres
-                                importantes na história da tecnologia.</p>
-                            <a href="../aula-4/index.html" target="_blank" rel="noopener">Deploy</a>
+                            <h3>ODS 3 - Saúde e Bem-estar</h3>
+                            <p>Um projeto sobre o Objetivo de Desenvolvimento Sustentável 3, que trata-se de Saúde e
+                                Bem-estar. Feito com HTML, CSS e Javascript</p>
+                            <a href="../ods/index.html" rel="noopener">Deploy</a>
                         </li>
                         <li>
                             <h3>Currículo Online</h3>
-                            <p>Atividade da aula 6 da turma 5 do Elas Na Tech 2023. Meu currículo online feito com
-                                HTML e CSS.</p>
+                            <p>Meu currículo online feito com HTML e CSS.</p>
                             <a href="../index.html" target="_blank" rel="noopener">Deploy</a>
                         </li>
                         <li>
                             <h3>Cardápio</h3>
-                            <p>Atividade da aula 7 da turma 5 do Elas Na Tech 2023. Um site de cardápio simples
-                                feito com HTML e CSS.</p>
+                            <p>Um site de cardápio simples feito com HTML e CSS.</p>
                             <a href="../aula-7-cardapio/index.html" target="_blank" rel="noopener">Deploy</a>
                         </li>
                     </ul>
@@ -124,6 +128,7 @@
         <a href="#header" class="scroll-to-top" aria-label="Scroll to top">
             <i class="fi fi-sr-arrow-square-up"></i>
         </a>
+        <script src="./src/js/main.js"></script>
     </body>
 
 </html>
