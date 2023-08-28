@@ -5,13 +5,23 @@
 }
 
 :root {
-    --header-dark-background: #1A1A40;
-    --dark-background: linear-gradient(to bottom, #141e30, #243b55);
+    /* --header-dark-background: #1b1c2c; */
+    /* --dark-background: linear-gradient(230deg, #1b1c2c, #252942); */
+    /* --dark-background: linear-gradient(230deg, #1b1c2c, #1a163a); */
+    /* --dark-background: linear-gradient(230deg, #120d19, #262841); */
+    --header-dark-background: #090126;
+    --dark-background: linear-gradient(230deg, #090126 0%, #170f38 54%, #301c61 100%);
+    --card-dark-background: #252942;
     --light-font: #fdfdfd;
     --primary-color: #a545dd;
     --hover-primary-color: #ff349a;
     --primary-gradient: linear-gradient(45deg, #a545dd, #ff349a);
     scroll-behavior: smooth;
+}
+
+::selection {
+    background: var(--primary-color);
+    color: var(--light-font);
 }
 
 body {
@@ -45,19 +55,11 @@ body,
 }
 
 .header__logo {
-    /*
-        Aguafina Script
-        Amarante
-        Baumans
-        Cinzel Decorative
-        Charm
-        Oleo Script Swash Caps
-        Uncial Antiqua
-    */
     font-family: "Cinzel Decorative", sans-serif, system-ui;
     font-size: 2.5rem;
     font-weight: 400;
     margin: .8rem 0;
+    user-select: none;
 }
 
 .header.scrolled .header__logo {
@@ -108,6 +110,7 @@ body,
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 240px;
     height: 100%;
     background: var(--dark-background);
@@ -141,7 +144,6 @@ body,
     display: none;
     font-size: 1.3rem;
     list-style: none;
-    margin-top: 5rem;
     padding: 0;
     text-align: center;
 }
@@ -199,6 +201,7 @@ body,
 
 .home__title--highlight {
     background: var(--primary-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
