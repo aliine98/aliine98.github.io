@@ -61,8 +61,6 @@
                 <h1 class="home__title">Olá! Meu nome é Aline Bevilacqua e sou uma <span class="home__title--highlight"
                         data-text="Desenvolvedora Web Front-end!"></span>
                 </h1>
-                <a href="../index.html" target="_blank" rel="noopener noreferrer"
-                    class="home__online-cv-button">Currículo Online</a>
                 <a href="./src/assets/curriculo(2p).pdf" target="_blank" rel="noopener noreferrer" download="curriculo"
                     class="home__cv-download-button">Download currículo em PDF <i class="fi fi-sr-download"></i></a>
             </section>
@@ -116,13 +114,17 @@
             </section>
             <section id="contact">
                 <h2 class="contact__title">Fale comigo</h2>
-                <form action="" class="contact__form">
-                    <label for="name">Nome:</label>
-                    <input type="text" placeholder="Nome" id="name">
+                <form action="https://formsubmit.co/aline.bevilacqua@hotmail.com.br" method="post"
+                    class="contact__form">
+                    <label for="name">Seu nome:</label>
+                    <input type="text" placeholder="Nome" name="name" required>
                     <label for="email">Seu email:</label>
-                    <input type="email" placeholder="E-mail" id="email">
+                    <input type="email" placeholder="E-mail" name="email" required>
                     <label for="message">Mensagem:</label>
-                    <textarea cols="30" rows="10" placeholder="Mensagem" id="message"></textarea>
+                    <textarea cols="30" rows="10" placeholder="Mensagem" name="message" required></textarea>
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_autoresponse"
+                        value="Recebi sua mensagem. Responderei o mais rápido possível! Obrigada pelo contato!">
                     <button type="submit" class="contact__form-button">Enviar</button>
                 </form>
             </section>
@@ -133,7 +135,7 @@
         <a href="#header" class="scroll-to-top" aria-label="Scroll to top">
             <i class="fi fi-sr-arrow-square-up"></i>
         </a>
-        <script src="./src/js/main.js"></script>
+        <script src="./src/js/main.js" type="module"></script>
     </body>
 
 </html>
