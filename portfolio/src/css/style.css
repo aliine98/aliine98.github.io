@@ -175,7 +175,7 @@ body,
 .home {
     position: relative;
     min-height: calc(100vh - 80px);
-    justify-content: center;
+    gap: 1rem;
 }
 
 .home,
@@ -187,14 +187,17 @@ body,
     margin: 0 auto;
     display: flex;
     flex-flow: column wrap;
-    gap: 1rem;
+    justify-content: center;
 }
 
 #about-me,
 #skills,
 #projects,
 #contact {
-    min-height: 100vh;
+    min-height: 90vh;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
 }
 
 .home__socials {
@@ -202,7 +205,7 @@ body,
     gap: 1rem;
     position: absolute;
     left: 50%;
-    top: 5vh;
+    top: 4vh;
     translate: -50%;
     z-index: 1;
 }
@@ -238,6 +241,7 @@ body,
 
 .home__title {
     margin-top: 0;
+    align-self: center;
 }
 
 .home__title--highlight {
@@ -309,4 +313,9 @@ body,
 .home__cv-download-button:is(:hover, :focus)::before {
     transform: translate(250px, -25px) rotate(35deg);
     opacity: 1;
+}
+
+.about-me__img {
+    margin: 3rem 0;
+    border-radius: 20px;
 }
