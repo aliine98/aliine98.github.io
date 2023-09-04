@@ -30,11 +30,11 @@
                 <i class="fi fi-sr-moon-stars"></i>
             </button>
             <div class="nav-overlay"></div>
-            <button class="btn header__burger-menu" aria-label="Menu toggle">
+            <button class="btn header__burger-menu" aria-label="Menu toggle" aria-controls="nav-menu" aria-expanded="false">
                 <i class="fi fi-sr-menu-burger"></i>
                 <i class="fi fi-sr-cross"></i>
             </button>
-            <nav class="header__nav">
+            <nav class="header__nav" id="nav-menu" aria-hidden="true">
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a href="#home">Home</a></li>
                     <li class="header__nav-item"><a href="#about-me">Sobre mim</a></li>
@@ -81,13 +81,13 @@
             <section id="skills">
                 <h2 class="skills__title">Skills</h2>
                 <ul class="skills__list">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Typescript</li>
-                    <li>Git</li>
-                    <li>Java</li>
-                    <li>MySQL</li>
+                    <li class="skills__list-item skills--html">HTML</li>
+                    <li class="skills__list-item skills--css">CSS</li>
+                    <li class="skills__list-item skills--js">JavaScript</li>
+                    <li class="skills__list-item skills--ts">Typescript</li>
+                    <li class="skills__list-item skills--git">Git</li>
+                    <li class="skills__list-item skills--java">Java</li>
+                    <li class="skills__list-item skills--mysql">MySQL</li>
                 </ul>
             </section>
             <section id="projects">

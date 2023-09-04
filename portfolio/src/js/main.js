@@ -5,7 +5,11 @@ document.querySelector("body").classList.remove("no-JS");
 //open nav menu
 const menuButton = document.querySelector(".header__burger-menu");
 menuButton.addEventListener("click", () => {
-    document.querySelector(".header__nav").classList.toggle("open");
+    const nav = document.querySelector(".header__nav");
+    nav.classList.toggle("open");
+    const ariaExpanded = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", !ariaExpanded);
+    nav.setAttribute("aria-hidden", ariaExpanded);
 });
 
 //change header style on scroll
