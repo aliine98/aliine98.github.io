@@ -8,6 +8,7 @@
     --header-dark-background: hsla(252, 49%, 12%, 0.932);
     --dark-background: linear-gradient(230deg, #150f2c, #1b1c2c);
     --card-dark-background: #252942;
+    --border-color: #778899;
     --light-font: #fdfdfd;
     --primary-color: #a545dd;
     --hover-primary-color: #ff349a;
@@ -318,4 +319,61 @@ body,
 .about-me__img {
     margin: 3rem 0;
     border-radius: 20px;
+}
+
+.skills__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.skills__list-item {
+    background-color: var(--card-dark-background);
+    padding: 1rem 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    min-width: 250px;
+    transition: all 1s;
+}
+
+.skills__list-item::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.skills--html::before {
+    background: url("../assets/HTML.svg") no-repeat center / contain;
+}
+
+.skills--css::before {
+    background: url("../assets/CSS.svg") no-repeat center / contain;
+}
+
+.skills--js::before {
+    background: url("../assets/JavaScript.svg") no-repeat center / contain;
+}
+
+.skills--ts::before {
+    background: url("../assets/TypeScript.svg") no-repeat center / contain;
+}
+
+.skills--git::before {
+    background: url("../assets/Git.svg") no-repeat center / contain;
+}
+
+.skills--java::before {
+    background: url("../assets/Java-Dark.svg") no-repeat center / contain;
+}
+
+.skills--mysql::before {
+    background: url("../assets/MySQL-Dark.svg") no-repeat center / contain;
 }
