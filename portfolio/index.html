@@ -19,6 +19,8 @@
         <link rel="manifest" href="./src/assets/site.webmanifest">
         <link rel="stylesheet" href="./src/css/style.css">
         <link rel="stylesheet" href="./src/css/no-js.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
         <title>Meu portfólio - Aline Bevilacqua</title>
     </head>
 
@@ -30,7 +32,8 @@
                 <i class="fi fi-sr-moon-stars"></i>
             </button>
             <div class="nav-overlay"></div>
-            <button class="btn header__burger-menu" aria-label="Menu toggle" aria-controls="nav-menu" aria-expanded="false">
+            <button class="btn header__burger-menu" aria-label="Menu toggle" aria-controls="nav-menu"
+                aria-expanded="false">
                 <i class="fi fi-sr-menu-burger"></i>
                 <i class="fi fi-sr-cross"></i>
             </button>
@@ -81,13 +84,13 @@
             <section id="skills">
                 <h2 class="skills__title">Skills</h2>
                 <ul class="skills__list">
-                    <li class="skills__list-item skills--html">HTML</li>
-                    <li class="skills__list-item skills--css">CSS</li>
-                    <li class="skills__list-item skills--js">JavaScript</li>
-                    <li class="skills__list-item skills--ts">Typescript</li>
-                    <li class="skills__list-item skills--git">Git</li>
-                    <li class="skills__list-item skills--java">Java</li>
-                    <li class="skills__list-item skills--mysql">MySQL</li>
+                    <li class="skills__list-item skills--html" data-aos="fade-right">HTML</li>
+                    <li class="skills__list-item skills--css" data-aos="fade-left">CSS</li>
+                    <li class="skills__list-item skills--js" data-aos="fade-right">JavaScript</li>
+                    <li class="skills__list-item skills--ts" data-aos="fade-left">Typescript</li>
+                    <li class="skills__list-item skills--git" data-aos="fade-right">Git</li>
+                    <li class="skills__list-item skills--java" data-aos="fade-left">Java</li>
+                    <li class="skills__list-item skills--mysql" data-aos="fade-right">MySQL</li>
                 </ul>
             </section>
             <section id="projects">
@@ -139,6 +142,10 @@
             <i class="fi fi-sr-arrow-square-up"></i>
         </a>
         <script src="./src/js/main.js" type="module"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 
 </html>
