@@ -1,19 +1,19 @@
-.no-JS .header {
+.no-js .header {
     flex-wrap: wrap;
     position: static;
 }
 
-.no-JS :is(.header__burger-menu, .header__dark-light-switch) {
+.no-js :is(.header__burger-menu, .header__dark-light-switch) {
     display: none;
 }
 
-.no-JS .header__nav {
+.no-js .header__nav {
     translate: 0;
     width: 100%;
     position: static;
 }
 
-.no-JS .header__nav-list {
+.no-js .header__nav-list {
     display: flex;
     gap: 0.6rem 0.8rem;
     justify-content: center;
@@ -22,26 +22,32 @@
     margin: 0;
 }
 
-.no-JS .header__nav-item::after {
+.no-js .header__nav-item::after {
     display: inline-block;
     width: 100%;
     height: 2px;
     background: antiquewhite;
 }
 
-.no-JS .header__nav-item:is(:first-child, :nth-child(even)) {
+.no-js .header__nav-item:is(:first-child, :nth-child(even)) {
     border-right: 2px solid var(--light-font);
     padding-right: 0.8rem;
 }
 
-.no-JS .home {
+.no-js .home {
     min-height: 100vh;
 }
 
-.no-JS .home__socials {
+.no-js .home__socials {
     top: 4vh;
 }
 
-.no-JS .home__title--highlight::before {
+.no-js .home__title--highlight::before {
     content: "Desenvolvedora Web Frontend!";
+}
+
+.no-js .skills__list-item {
+    opacity: 1;
+    translate: 0;
+    transform: initial;
 }

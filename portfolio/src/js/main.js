@@ -1,6 +1,6 @@
 import { typing, textElement, text } from "./typing-animation.js";
 
-document.querySelector("body").classList.remove("no-JS");
+document.querySelector("body").classList.remove("no-js");
 
 //open nav menu
 const menuButton = document.querySelector(".header__burger-menu");
