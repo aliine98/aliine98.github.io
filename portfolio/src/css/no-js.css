@@ -15,23 +15,11 @@
 
 .no-js .header__nav-list {
     display: flex;
-    gap: 0.6rem 0.8rem;
+    gap: .6rem 1rem;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
-}
-
-.no-js .header__nav-item::after {
-    display: inline-block;
-    width: 100%;
-    height: 2px;
-    background: antiquewhite;
-}
-
-.no-js .header__nav-item:is(:first-child, :nth-child(even)) {
-    border-right: 2px solid var(--light-font);
-    padding-right: 0.8rem;
 }
 
 .no-js .home {
@@ -50,4 +38,19 @@
     opacity: 1;
     translate: 0;
     transform: initial;
+}
+
+.no-js .swiper-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.no-js .projects__link {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: initial;
+}
+
+.no-js :is(.swiper-button-prev, .swiper-button-next, .swiper-pagination) {
+    display: none;
 }

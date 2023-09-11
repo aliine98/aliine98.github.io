@@ -19,10 +19,10 @@
         <link rel="manifest" href="./src/assets/site.webmanifest">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
             integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="./src/css/style.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
         <link rel="stylesheet" href="./src/css/no-js.css">
         <title>Meu portfólio - Aline Bevilacqua</title>
     </head>
@@ -87,43 +87,59 @@
             <section id="skills">
                 <h2 class="skills__title">Skills</h2>
                 <ul class="skills__list">
-                    <li class="skills__list-item skills--html" data-aos="fade-right">HTML</li>
-                    <li class="skills__list-item skills--css" data-aos="fade-left">CSS</li>
-                    <li class="skills__list-item skills--js" data-aos="fade-right">JavaScript</li>
-                    <li class="skills__list-item skills--ts" data-aos="fade-left">Typescript</li>
-                    <li class="skills__list-item skills--git" data-aos="fade-right">Git</li>
-                    <li class="skills__list-item skills--java" data-aos="fade-left">Java</li>
-                    <li class="skills__list-item skills--mysql" data-aos="fade-right">MySQL</li>
+                    <li class="skills__list-item skills--html" data-aos="zoom-in-up">HTML</li>
+                    <li class="skills__list-item skills--css" data-aos="zoom-in-up">CSS</li>
+                    <li class="skills__list-item skills--js" data-aos="zoom-in-up">JavaScript</li>
+                    <li class="skills__list-item skills--ts" data-aos="zoom-in-up">Typescript</li>
+                    <li class="skills__list-item skills--git" data-aos="zoom-in-up">Git</li>
+                    <li class="skills__list-item skills--java" data-aos="zoom-in-up">Java</li>
+                    <li class="skills__list-item skills--mysql" data-aos="zoom-in-up">MySQL</li>
                 </ul>
             </section>
             <section id="projects">
                 <h2 class="projects__title">Projetos</h2>
-                <div class="projects-container">
-                    <a href="#" aria-label="Previous" class="prev-btn"><i class="fi fi-sr-angle-left"></i></a>
-                    <ul class="projects__list">
-                        <li class="projects__list-item">
-                            <img src="./src/assets/ods.png" alt="" width="200px" height="200px">
-                            <h3 class="ods-title">ODS 3 - Saúde e Bem-estar</h3>
-                            <p>Um projeto sobre o Objetivo de Desenvolvimento Sustentável 3, que trata-se de Saúde e
-                                Bem-estar. Feito com HTML, CSS e Javascript</p>
-                            <a href="../ods/index.html" rel="noopener" class="projects__link">Deploy</a>
+                <div class="projects-container swiper">
+                    <ul class="projects__list swiper-wrapper">
+                        <li class="projects__list-item swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./src/assets/ods-shots_so.png" alt="Capa do projeto ODS" width="100%"
+                                    height="200px" class="projects__img">
+                            </div>
+                            <div class="project-text-wrapper">
+                                <h3>ODS 3 - Saúde e Bem-estar</h3>
+                                <p>Um projeto sobre o Objetivo de Desenvolvimento Sustentável 3, que trata-se de Saúde e
+                                    Bem-estar. Feito com HTML, CSS e Javascript</p>
+                                <a href="../ods/index.html" target="_blank" rel="noopener"
+                                    class="projects__link">Deploy</a>
+                            </div>
                         </li>
-                        <li class="projects__list-item">
-                            <img src="./src/assets/curriculo-web.png" alt="" width="200px" height="200px">
-                            <h3 class="cv-title">Currículo Online</h3>
-                            <p>Meu currículo online feito com HTML e CSS.</p>
-                            <a href="../index.html" target="_blank" rel="noopener" class="projects__link">Deploy</a>
+                        <li class="projects__list-item swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./src/assets/cv-shots_so.png" alt="Capa do projeto Currículo Web" width="100%"
+                                    height="200px" class="projects__img">
+                            </div>
+                            <div class="project-text-wrapper">
+                                <h3>Currículo Online</h3>
+                                <p>Meu currículo online feito com HTML e CSS.</p>
+                                <a href="../index.html" target="_blank" rel="noopener" class="projects__link">Deploy</a>
+                            </div>
                         </li>
-                        <li class="projects__list-item">
-                            <img src="./src/assets/cardapio.png" alt="" width="200px" height="200px">
-                            <h3 class="cardapio-title">Cardápio</h3>
-                            <p>Um site de cardápio simples feito com HTML e CSS.</p>
-                            <a href="../aula-7-cardapio/index.html" target="_blank" rel="noopener"
-                                class="projects__link">Deploy</a>
+                        <li class="projects__list-item swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./src/assets/cardapio-shots_so.png" alt="Capa do projeto Cardápio"
+                                    width="100%" height="200px" class="projects__img">
+                            </div>
+                            <div class="project-text-wrapper">
+                                <h3>Cardápio</h3>
+                                <p>Um site de cardápio simples feito com HTML e CSS.</p>
+                                <a href="../aula-7-cardapio/index.html" target="_blank" rel="noopener"
+                                    class="projects__link">Deploy</a>
+                            </div>
                         </li>
                     </ul>
-                    <a href="#" aria-label="Next" class="next-btn"><i class="fi fi-sr-angle-right"></i></a>
-                    <div role="tablist" class="dots"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </section>
             <section id="contact">
@@ -131,11 +147,12 @@
                 <form action="https://formsubmit.co/aline.bevilacqua@hotmail.com.br" method="post"
                     class="contact__form">
                     <label for="name">Seu nome:</label>
-                    <input type="text" placeholder="Nome" name="name" required>
+                    <input type="text" placeholder="Nome" name="name" id="name" required>
                     <label for="email">Seu email:</label>
-                    <input type="email" placeholder="E-mail" name="email" required>
+                    <input type="email" placeholder="E-mail" name="email" id="email" required>
                     <label for="message">Mensagem:</label>
-                    <textarea cols="30" rows="10" placeholder="Mensagem" name="message" required></textarea>
+                    <textarea cols="30" rows="10" placeholder="Mensagem" name="message" id="message"
+                        required></textarea>
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_autoresponse"
                         value="Recebi sua mensagem. Responderei o mais rápido possível! Obrigada pelo contato!">
@@ -154,7 +171,6 @@
         <script>
             AOS.init();
         </script>
-
     </body>
 
 </html>

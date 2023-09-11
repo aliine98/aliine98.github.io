@@ -1,4 +1,5 @@
 import { typing, textElement, text } from "./typing-animation.js";
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs";
 
 document.querySelector("body").classList.remove("no-js");
 
@@ -24,3 +25,28 @@ if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     //init typing animation
     typing();
 }
+
+new Swiper(".swiper", {
+    effect: "cards",
+    a11y: {
+        prevSlideMessage: "Projeto anterior",
+        nextSlideMessage: "Próximo projeto",
+        paginationBulletMessage: "Ir para projeto {{index}}"
+    },
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    rewind: true,
+    keyboard: true,
+});
