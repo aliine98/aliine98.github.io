@@ -310,11 +310,13 @@ body,
     }
 }
 
-.home__cv-download-button {
+.home__cv-download-button,
+.contact__form-button {
     background-color: var(--primary-color);
     color: var(--light-font);
     padding: 10px 15px;
     border-radius: 50px;
+    border: none;
     text-decoration: none;
     transition: all 1s;
     position: relative;
@@ -322,10 +324,9 @@ body,
     outline: 2px solid var(--primary-color);
     overflow: hidden;
     align-self: center;
-    width: fit-content;
 }
 
-.home__cv-download-button:is(:hover, :focus) {
+:is(.home__cv-download-button, .contact__form-button):is(:hover, :focus) {
     background-color: var(--hover-primary-color);
     outline-offset: 15px;
     outline-color: rgba(255, 52, 154, 0);
@@ -508,6 +509,39 @@ body,
 
 .swiper-pagination-bullet-active {
     scale: 1.4;
+}
+
+/* Contact */
+
+.contact__form {
+    display: grid;
+    width: 85%;
+    gap: 1rem;
+    border-radius: 28px;
+    padding: 3rem;
+    background: linear-gradient(145deg, #171728, #1c1c2f);
+    box-shadow: 13px 13px 21px #141422,
+        -13px -13px 21px #202036;
+    margin-bottom: 3rem;
+}
+
+.contact__form :is(input, textarea) {
+    border: none;
+    accent-color: var(--primary-color);
+    background-color: var(--border-color);
+    padding: 10px;
+    color: var(--light-font);
+    border-radius: 15px;
+    margin-bottom: .8rem;
+}
+
+.contact__form :is(input, textarea)::placeholder {
+    color: #b9b9b9;
+}
+
+#message {
+    resize: none;
+    width: 100%;
 }
 
 @media screen and (min-width: 600px) {
