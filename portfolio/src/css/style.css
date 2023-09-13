@@ -44,6 +44,7 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color .8s;
+    line-height: 1.5;
 }
 
 main {
@@ -62,7 +63,7 @@ body,
 .header {
     align-items: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     position: sticky;
     top: 0;
     transition: all .6s;
@@ -133,7 +134,8 @@ body,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 240px;
+    width: 40%;
+    min-width: 240px;
     height: 100%;
     background: var(--dark-background);
     box-shadow: 0 0 20px rgb(0 0 0 / 70%);
@@ -164,7 +166,7 @@ body,
 
 .header__nav-list {
     display: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 
@@ -213,7 +215,7 @@ body,
 
 .home {
     position: relative;
-    min-height: calc(100vh - 80px);
+    min-height: calc(90vh - 80px);
     gap: 1rem;
 }
 
@@ -226,14 +228,13 @@ body,
     margin: 0 auto;
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #about-me,
 #skills,
 #projects,
 #contact {
-    min-height: 90vh;
     align-items: center;
     gap: 2rem;
     padding-top: 5rem;
@@ -245,7 +246,7 @@ body,
     gap: 1rem;
     position: absolute;
     left: 50%;
-    top: 4vh;
+    top: 2vh;
     translate: -50%;
     z-index: 1;
 }
@@ -283,6 +284,7 @@ body,
     margin-top: 0;
     align-self: center;
     font-size: 1.5rem;
+    line-height: initial;
 }
 
 .home__title--highlight {
@@ -302,8 +304,8 @@ body,
     border-radius: 2px;
     content: "";
     display: inline-block;
-    height: 30px;
-    margin-left: 2px;
+    height: 1.4em;
+    margin-left: 3px;
     position: absolute;
     width: 4px;
 }
@@ -353,8 +355,15 @@ body,
 }
 
 .home__cv-download-button:is(:hover, :focus)::before {
-    transform: translate(250px, -25px) rotate(35deg);
+    transform: translate(17rem, -25px) rotate(35deg);
     opacity: 1;
+}
+
+.about-me-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    place-items: center;
 }
 
 .about-me__img {
@@ -378,7 +387,9 @@ body,
     border-radius: 20px;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     min-width: 250px;
     transition: all 1s;
 }
@@ -520,6 +531,15 @@ body,
     scale: 1.4;
 }
 
+#projects::after {
+    content: "";
+    width: 85%;
+    max-width: 40rem;
+    margin-top: 2rem;
+    height: 22rem;
+    background: url("../assets/undraw_proud_coder.svg") no-repeat center / contain;
+}
+
 /* Contact */
 
 .contact__form {
@@ -550,7 +570,7 @@ body,
 }
 
 .contact__form-button {
-    width: 60%;
+    width: 50%;
     place-self: center;
 }
 
@@ -576,7 +596,8 @@ body,
 .credits__list {
     display: grid;
     place-content: center;
-    gap: 1rem;
+    text-align: initial;
+    gap: .2rem;
     grid-template-columns: 1fr;
     margin: 0 auto 3rem;
     width: fit-content;
@@ -601,14 +622,127 @@ body,
 /* Media Queries */
 
 @media screen and (min-width: 600px) {
+
     .projects__img {
         height: 300px;
+    }
+
+    .credits__list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+    }
+
+    .scroll-to-top {
+        right: 4rem;
+        bottom: 4rem;
+        font-size: 3rem;
     }
 }
 
 @media screen and (min-width: 768px) {
+    :root {
+        font-size: 18px;
+    }
+
+    #about-me,
+    #skills,
+    #projects,
+    #contact {
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+
+    .home__title {
+        line-height: 1.5;
+    }
+
+    .home__title,
+    .about-me__title,
+    .skills__title,
+    .projects__title,
+    .contact__title {
+        margin-bottom: 2rem;
+    }
+
+    .about-me__img {
+        width: 300px;
+    }
+
+    .skills__item::before {
+        width: 40px;
+        height: 40px;
+    }
+
     .projects__list-item {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .header__nav-list {
+        display: flex;
+        gap: .6rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .header__burger-menu {
+        display: none;
+    }
+
+    .header__nav {
+        translate: 0;
+        position: static;
+    }
+
+    .home {
+        display: grid;
+        grid-template-areas:
+            "social title img"
+            ". btn .";
+        place-items: center;
+        place-content: center;
+        row-gap: 0;
+        min-height: calc(80vh - 80px);
+    }
+
+    .home__socials {
+        flex-direction: column;
+        position: static;
+        grid-area: social;
+        margin-left: 2rem;
+    }
+
+    .home__perfil-img {
+        grid-area: img;
+        width: 300px;
+    }
+
+    .home__title {
+        grid-area: title;
+        margin-bottom: 0;
+    }
+
+    .home__cv-download-button {
+        grid-area: btn;
+    }
+
+    .about-me-container {
+        grid-template-columns: 400px 1fr;
+        gap: 1rem;
+    }
+
+    .skills__item::before {
+        width: 50px;
+        height: 50px;
+    }
+
+    .credits__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1400px) {}

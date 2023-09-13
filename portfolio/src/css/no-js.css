@@ -15,15 +15,11 @@
 
 .no-js .header__nav-list {
     display: flex;
-    gap: .6rem 1rem;
+    gap: .6rem 1.5rem;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
-}
-
-.no-js .home {
-    min-height: 100vh;
 }
 
 .no-js .home__socials {
@@ -53,4 +49,10 @@
 
 .no-js :is(.swiper-button-prev, .swiper-button-next, .swiper-pagination) {
     display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .no-js .header__nav {
+        width: fit-content;
+    }
 }
