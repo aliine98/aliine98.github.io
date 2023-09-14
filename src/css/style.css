@@ -429,6 +429,10 @@ body,
     background: url("../assets/MySQL-Dark.svg") no-repeat center / contain;
 }
 
+.skills--bootstrap::before {
+    background: url("../assets/Bootstrap.svg") no-repeat center / contain;
+}
+
 /* Projects */
 
 .swiper {
@@ -445,6 +449,7 @@ body,
 
 .projects__img {
     border-radius: 20px;
+    align-self: center;
 }
 
 .project-text-wrapper {
@@ -624,7 +629,7 @@ body,
 @media screen and (min-width: 600px) {
 
     .projects__img {
-        height: 300px;
+        height: 100%;
     }
 
     .credits__list {
@@ -744,5 +749,3 @@ body,
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
-@media screen and (min-width: 1400px) {}
