@@ -200,13 +200,13 @@ body,
     transition: all .4s;
 }
 
-.header__nav-list a:is(:hover, :focus),
+.header__nav-list a:is(:hover, :focus, .active),
 .credits__list a:is(:hover, :focus),
 .scroll-to-top:is(:hover, :focus) {
     color: var(--hover-primary-color);
 }
 
-.header__nav-list a:is(:hover, :focus)::after,
+.header__nav-list a:is(:hover, :focus, .active)::after,
 .credits__list a:is(:hover, :focus)::after {
     transform: scaleX(1);
 }
