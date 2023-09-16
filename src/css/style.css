@@ -129,7 +129,7 @@ body,
 }
 
 .nav-overlay {
-    z-index: 3;
+    z-index: 1;
 }
 
 .header__nav {
