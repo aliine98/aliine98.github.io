@@ -6,8 +6,21 @@
 
 :root {
     --header-dark-background: hsla(252, 49%, 12%, 0.932);
+    --header-light-background: hsla(277, 100%, 92%, 0.932);
     --dark-background: linear-gradient(230deg, #150f2c, #1b1c2c);
+
+    /* --light-background: linear-gradient(225deg, #fbe9ff 0%, #f2d7fa 100%); */
+
+    /* --light-background: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%); */
+
+    --light-background: linear-gradient(230deg, #f2e4ff, #fbe9ff);
+    /* --light-background: linear-gradient(230deg, #fbe9ff, #ECDCFF); */
+
+    /* --light-background: linear-gradient(147deg, #fbe9ff 0%, #fcf5fc 70%); */
+    --dark-font: #1d1d1d;
     --card-dark-background: #252942;
+    /* --card-light-background: #3b3758; */
+    --card-light-background: #3b2c5f;
     --project-card-background: #0f0e1c;
     --footer-background: #0c0819;
     --border-color: #444354;
@@ -577,6 +590,7 @@ body,
 .contact__form-button {
     width: 50%;
     place-self: center;
+    cursor: pointer;
 }
 
 #message {
@@ -622,6 +636,88 @@ body,
 
 .scroll-to-top.show {
     display: block;
+}
+
+/* Light mode */
+
+body.light {
+    background: var(--light-background);
+}
+
+body.light,
+.light .home__socials a,
+.light .header__nav-list a {
+    color: var(--dark-font);
+}
+
+.light .header.scrolled {
+    background: var(--header-light-background);
+}
+
+.light .btn {
+    box-shadow: none;
+    background-color: var(--primary-color);
+}
+
+.light .btn:is(:hover, :focus) {
+    background-color: var(--hover-primary-color);
+}
+
+.light .header__dark-light-switch i:last-child {
+    display: block;
+}
+
+.light .header__dark-light-switch i:first-child {
+    display: none;
+}
+
+.light .header__nav.open {
+    background: var(--light-background);
+}
+
+.light .header__nav-list a:is(:focus, :hover, .active) {
+    color: var(--hover-primary-color);
+}
+
+.light .home__socials a:is(:hover, :focus) {
+    color: var(--primary-color);
+}
+
+.light .skills__list-item,
+.light .projects__list-item {
+    background: var(--card-light-background);
+    color: var(--light-font);
+    border: none;
+}
+
+.light .contact__form {
+    /* background: linear-gradient(145deg, #ffffff, #e3dde3);
+    box-shadow: 7px 7px 14px #bdb8bd,
+        -7px -7px 14px #ffffff; */
+
+    /* background: linear-gradient(145deg, #faf0ef, #d3cac9);
+    box-shadow: 5px 5px 13px #b4acac,
+        -5px -5px 13px #ffffff; */
+
+    /* background: linear-gradient(145deg, #ffddff, #d6bade);
+    box-shadow: 5px 5px 13px #b79fbe,
+        -5px -5px 13px #fdfdfd; */
+
+    /* background: linear-gradient(145deg, #fff9ff, #e2d2e6);
+    box-shadow: 6px 6px 12px #c1b3c4,
+        -6px -6px 12px #ffffff; */
+    background: linear-gradient(225deg, #fff9ff, #e2d2e6);
+    box-shadow: -6px 6px 12px #c1b3c4,
+        6px -6px 12px #ffffff;
+}
+
+.light .contact__form :is(input, textarea) {
+    background-color: var(--light-font);
+    color: var(--dark-font);
+}
+
+.light .footer {
+    color: var(--light-font);
 }
 
 /* Media Queries */

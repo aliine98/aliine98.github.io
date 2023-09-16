@@ -3,11 +3,6 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs
 
 document.querySelector("body").classList.remove("no-js");
 
-const menuButton = document.querySelector(".header__burger-menu");
-const nav = document.querySelector(".header__nav");
-
-nav.setAttribute("aria-hidden", true);
-
 function setAriaAttributes() {
     const ariaExpanded = menuButton.getAttribute("aria-expanded") === "true";
     menuButton.setAttribute("aria-expanded", !ariaExpanded);
@@ -40,6 +35,14 @@ function initSwiperCarousel(autoplayValue) {
         keyboard: true,
     });
 }
+
+const menuButton = document.querySelector(".header__burger-menu");
+const nav = document.querySelector(".header__nav");
+const lightSwitch = document.querySelector(".header__dark-light-switch");
+
+lightSwitch.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+});
 
 //open nav menu
 menuButton.addEventListener("click", () => {
