@@ -276,6 +276,7 @@ body,
 
 .home__perfil-img {
     background: url("../assets/blob.svg") no-repeat center;
+    background-size: contain;
     height: 300px;
     margin-top: 1.8rem;
     position: relative;
