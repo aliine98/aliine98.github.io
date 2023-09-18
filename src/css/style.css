@@ -47,7 +47,6 @@ body {
     font-family: "Corporative Alt", sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color .8s;
     line-height: 1.5;
 }
 
@@ -330,18 +329,22 @@ body,
 
 .home__cv-download-button,
 .contact__form-button {
+    align-items: center;
+    align-self: center;
     background-color: var(--primary-color);
-    color: var(--light-font);
-    padding: 10px 15px;
-    border-radius: 50px;
     border: none;
-    text-decoration: none;
-    transition: all 1s;
-    position: relative;
-    display: inline-block;
+    border-radius: 50px;
+    color: var(--light-font);
+    cursor: pointer;
+    display: flex;
+    gap: .6rem;
+    justify-content: center;
     outline: 2px solid var(--primary-color);
     overflow: hidden;
-    align-self: center;
+    padding: 10px 15px;
+    position: relative;
+    text-decoration: none;
+    transition: all 1s;
 }
 
 :is(.home__cv-download-button, .contact__form-button):is(:hover, :focus) {
@@ -500,17 +503,21 @@ body,
 }
 
 .projects__link {
-    text-decoration: none;
-    color: var(--light-font);
     position: relative;
     z-index: 0;
-    padding: 10px 20px;
+    padding: 10px 26px;
     border: none;
+}
+
+.projects__link,
+.projects__secondary-link {
+    text-decoration: none;
     border-radius: 50px;
-    margin: 1rem;
+    color: var(--light-font);
     pointer-events: none;
     cursor: default;
     opacity: .7;
+    margin: 1rem;
 }
 
 .projects__link::before {
@@ -551,7 +558,17 @@ body,
     background-color: var(--hover-primary-color);
 }
 
-.swiper-slide-active .projects__link {
+.projects__secondary-link {
+    transition: all .5s;
+    border: 2px solid var(--primary-color);
+    padding: 10px 15px;
+}
+
+.projects__secondary-link:is(:hover, :focus) {
+    background-color: var(--primary-color);
+}
+
+.swiper-slide-active :is(.projects__link, .projects__secondary-link) {
     cursor: pointer;
     pointer-events: initial;
     opacity: 1;
@@ -616,7 +633,7 @@ body,
 .contact__form-button {
     width: 50%;
     place-self: center;
-    cursor: pointer;
+    max-width: 300px;
 }
 
 #message {
