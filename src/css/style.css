@@ -827,7 +827,8 @@ body.light,
         margin: 0;
     }
 
-    .header__burger-menu {
+    .header__burger-menu,
+    .header__burger-menu[aria-expanded="true"] + .nav-overlay {
         display: none;
     }
 
