@@ -41,7 +41,7 @@
     gap: 1.5rem;
 }
 
-.no-js .projects__link {
+.no-js :is(.projects__link, .projects__secondary-link) {
     opacity: 1;
     cursor: pointer;
     pointer-events: initial;
