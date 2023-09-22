@@ -1,32 +1,33 @@
-export { typing, textElement, text };
-
-const textElement = document.querySelector(".home__title--highlight");
-const text = textElement.dataset.text;
+export { typing };
 
 /**
- * Simulates typing effect by gradually displaying characters of a text from html data attribute.
- * @returns None
+ * Generates a typing animation for a given text in the HTML element.
+ *
+ * @param {HTMLElement} textElement - The HTML element where the text will be typed.
+ * @param {string} text - The text to be typed.
  */
-async function typing() {
+async function typing(textElement, text) {
     for (let i = 0; i < text.length; i++) {
-        await new Promise((resolve) => {
+        await new Promise(resolve => {
             setTimeout(() => {
                 textElement.innerHTML += text[i];
                 resolve();
             }, 100);
         });
     }
-    deleteTyping(text.length);
+    deleteTyping(text.length, textElement, text);
 }
 
 /**
- * Deletes the typing effect by gradually removing characters from the text element.
- * @param {number} textLength - The length of the text to delete.
- * @returns None
+ * Deletes the text in the given textElement by removing characters one by one in a timed loop.
+ *
+ * @param {number} textLength - The length of the text to be deleted.
+ * @param {HTMLElement} textElement - The HTML element containing the text to be deleted.
+ * @param {string} text - The text to be deleted.
  */
-async function deleteTyping(textLength) {
+async function deleteTyping(textLength, textElement, text) {
     for (let i = textLength; i >= 0; i--) {
-        await new Promise((resolve) => {
+        await new Promise(resolve => {
             setTimeout(() => {
                 const deletingText = textElement.textContent.substring(0, i);
                 textElement.textContent = deletingText;
@@ -34,5 +35,5 @@ async function deleteTyping(textLength) {
             }, 100);
         });
     }
-    typing();
+    typing(textElement, text);
 }
