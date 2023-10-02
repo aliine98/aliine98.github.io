@@ -190,8 +190,14 @@ body,
 .header__nav-list a,
 .credits__list a,
 .certificates-list__item-link {
-    color: var(--light-font);
     text-decoration: none;
+}
+
+.header__nav-list a,
+.credits__list a,
+.certificates-list__item-link,
+.about-me__description a {
+    color: var(--light-font);
     transition: color .4s;
 }
 
@@ -208,7 +214,8 @@ body,
 .header__nav-list a:is(:hover, :focus, .active),
 .credits__list a:is(:hover, :focus),
 .scroll-to-top:is(:hover, :focus),
-.certificates-list__item-link:is(:hover, :focus) {
+.certificates-list__item-link:is(:hover, :focus),
+.about-me__description a:is(:hover, :focus) {
     color: var(--hover-primary-color);
 }
 
@@ -265,6 +272,7 @@ body,
 
 .home__socials a:is(:hover, :focus) {
     color: var(--primary-color);
+    scale: 1.2;
 }
 
 .home__perfil-img {
