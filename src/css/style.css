@@ -47,6 +47,7 @@ body {
     font-family: "Corporative Alt", sans-serif;
     line-height: 1.5;
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
 }
 
@@ -472,7 +473,7 @@ body,
 }
 
 .skills--java::before {
-    background: url("../assets/Java-Dark.svg") no-repeat center / contain;
+    background: url("../assets/Java-Light.svg") no-repeat center / contain;
 }
 
 .skills--mysql::before {
@@ -481,6 +482,10 @@ body,
 
 .skills--bootstrap::before {
     background: url("../assets/Bootstrap.svg") no-repeat center / contain;
+}
+
+.skills--python::before {
+    background: url("../assets/Python-Dark.svg") no-repeat center / contain;
 }
 
 /* Projects */
@@ -670,6 +675,10 @@ body,
     margin: 0 auto 3rem;
     place-content: center;
     text-align: initial;
+    width: fit-content;
+}
+
+.credits__list li {
     width: fit-content;
 }
 
