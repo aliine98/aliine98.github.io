@@ -22,6 +22,9 @@
         <link rel="preconnect" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
         <link rel="prefetch" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
         <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+        <link rel="preconnect" href="https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css">
+        <link rel="prefetch" href="https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css">
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css">
         <link rel="preconnect" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
         <link rel="prefetch" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
         <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
@@ -109,17 +112,20 @@
                         <a target="_blank" href="https://www.oracle.com/br/">Oracle</a>.
                         Desde então, me apaixonei pela programação, pois estimula minha criatividade e adoro como posso resolver uma coisa de várias
                         maneiras diferentes! Continuo sempre estudando e fico ligada em oportunidades de cursos e
-                        bootcamps gratuitos, foi assim que conheci o <a target="_blank" href="https://jabrasil.org.br/elasnatech23/">Elas na tech</a>
-                        da <a target="_blank" href="https://jabrasil.org.br/">JA Brasil</a> com parceria da
-                        <a target="_blank" href="https://www.ibm.com/br-pt/">IBM</a>, no qual estou atualmente participando.
+                        bootcamps gratuitos.
                     </p>
                 </div>
                 <section class="about-me__certificates">
                     <h3>Certificados</h3>
                     <ul class="certificates__list">
                         <li>
-                            <a href="https://www.udemy.com/certificate/UC-0576a1dc-1a44-42c7-9a2e-837a50ebaa38/" target="_blank" rel="noopener" class="certificates-list__item-link">
-                                <img src="./src/assets/curso-web-frontend-daniel.webp" alt="Certificado do curso web frontend do Daniel Tapias" width="250">
+                            <a href="https://www.dio.me/certificate/A765069A/" target="_blank" rel="noopener" class="certificates-list__item-link">
+                                <img src="./src/assets/curso-services-angular.webp" alt="Certificado do curso Trabalhando com services no Angular da DIO" width="250">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/posts/aline-bevilacqua_elas-na-tech-2023-certificado-activity-7129831877187710976-6Ez9" target="_blank" rel="noopener" class="certificates-list__item-link">
+                                <img src="./src/assets/ElasNaTech-2023.webp" alt="Certificado do curso Elas Na Tech 2023" width="250">
                             </a>
                         </li>
                         <li>
@@ -142,11 +148,6 @@
                                 <img src="./src/assets/formacao-java-Alura.webp" alt="Certificado da formação Java da Alura" width="250">
                             </a>
                         </li>
-                        <li>
-                            <a href="https://cursos.alura.com.br/program/certificate/595e1101-2510-4880-a1b0-2017b7747edc" target="_blank" rel="noopener" class="certificates-list__item-link">
-                                <img src="./src/assets/programa-one.webp" alt="Certificado do programa Oracle Next Education" width="250">
-                            </a>
-                        </li>
                     </ul>
                 </section>
             </section>
@@ -156,6 +157,7 @@
                     <li class="skills__list-item skills--html" data-aos="zoom-in-up">HTML</li>
                     <li class="skills__list-item skills--css" data-aos="zoom-in-up">CSS</li>
                     <li class="skills__list-item skills--js" data-aos="zoom-in-up">JavaScript</li>
+                    <li class="skills__list-item skills--angular" data-aos="zoom-in-up">Angular</li>
                     <li class="skills__list-item skills--ts" data-aos="zoom-in-up">Typescript</li>
                     <li class="skills__list-item skills--git" data-aos="zoom-in-up">Git</li>
                     <li class="skills__list-item skills--bootstrap" data-aos="zoom-in-up">Bootstrap</li>
@@ -169,52 +171,63 @@
                 <div class="projects-container swiper">
                     <ul class="projects__list swiper-wrapper">
                         <li class="projects__list-item swiper-slide">
+                            <img src="./src/assets/snapclima.webp" alt="Capa do projeto ODS" width="100%" height="200" loading="lazy" class="projects__img">
+                            <div class="project-text-wrapper">
+                                <h3>SnapClima</h3>
+                                <p>Um web app que mostra o clima atual da sua localização e também de qualquer cidade
+                                    que for pesquisada. Utilizei a API OpenWeatherMap, que fornece informações precisas e
+                                    atualizadas sobre o clima.</p>
+                                <div class="project-techs">
+                                    <span class="project-techs__tag">Javascript</span>
+                                    <span class="project-techs__tag">HTML</span>
+                                    <span class="project-techs__tag">CSS</span>
+                                </div>
+                                <a href="https://aliine98.github.io/snapclima-imersao-frontend/" target="_blank" rel="noopener" class="projects__link">Deploy</a>
+                                <a href="https://github.com/aliine98/snapclima-imersao-frontend/" target="_blank" rel="noopener" class="projects__secondary-link">Repositório</a>
+                            </div>
+                        </li>
+                        <li class="projects__list-item swiper-slide">
                             <img src="./src/assets/ods-shots_so.webp" alt="Capa do projeto ODS" width="100%" height="200" loading="lazy" class="projects__img">
                             <div class="project-text-wrapper">
                                 <h3>ODS 3 - Saúde e Bem-estar</h3>
                                 <p>Um site sobre o Objetivo de Desenvolvimento Sustentável 3, que trata-se de Saúde e
-                                    Bem-estar. Feito com HTML, CSS e Javascript</p>
+                                    Bem-estar.</p>
+                                <div class="project-techs">
+                                    <span class="project-techs__tag">Javascript</span>
+                                    <span class="project-techs__tag">HTML</span>
+                                    <span class="project-techs__tag">CSS</span>
+                                </div>
                                 <a href="https://aliine98.github.io/elasnatech-atividades/ods/index.html" target="_blank" rel="noopener" class="projects__link">Deploy</a>
                                 <a href="https://github.com/aliine98/elasnatech-atividades/tree/main/ods" target="_blank" rel="noopener" class="projects__secondary-link">Repositório</a>
-                            </div>
-                        </li>
-                        <li class="projects__list-item swiper-slide">
-                            <img src="./src/assets/cv-shots-so.webp" alt="Capa do projeto Currículo Web" width="100%" height="200" loading="lazy" class="projects__img">
-                            <div class="project-text-wrapper">
-                                <h3>Currículo Online</h3>
-                                <p>Meu currículo online feito com HTML, CSS e Javascript. Detalha minhas experiências e
-                                    informações sobre projetos e contato</p>
-                                <a href="https://aliine98.github.io/elasnatech-atividades/index.html" target="_blank" rel="noopener" class="projects__link">Deploy</a>
-                                <a href="https://github.com/aliine98/elasnatech-atividades/tree/main/aula-6" target="_blank" rel="noopener" class="projects__secondary-link">Repositório</a>
-                            </div>
-                        </li>
-                        <li class="projects__list-item swiper-slide">
-                            <img src="./src/assets/cardapio-shots-so.webp" alt="Capa do projeto Cardápio" width="100%" height="200" loading="lazy" class="projects__img">
-                            <div class="project-text-wrapper">
-                                <h3>Cardápio</h3>
-                                <p>Um site de cardápio simples para uma padaria fictícia que mostra cards com os pratos
-                                    e suas respectivas descrições e preços. Desenvolvido com HTML e CSS.</p>
-                                <a href="https://aliine98.github.io/elasnatech-atividades/aula-7-cardapio/index.html" target="_blank" rel="noopener" class="projects__link">Deploy</a>
-                                <a href="https://github.com/aliine98/elasnatech-atividades/tree/main/aula-7-cardapio" target="_blank" rel="noopener" class="projects__secondary-link">Repositório</a>
                             </div>
                         </li>
                         <li class="projects__list-item swiper-slide">
                             <img src="./src/assets/imc.webp" alt="Capa do projeto Calculadora de IMC" width="100%" height="200" loading="lazy" class="projects__img">
                             <div class="project-text-wrapper">
                                 <h3>Calculadora de IMC</h3>
-                                <p>Um site que calcula e classifica seu <abbr title="Índice de Massa Corporal">IMC</abbr>. Desenvolvido com HTML, Bootstrap 5, CSS e Python (usando PyScript).</p>
+                                <p>Um site que calcula e classifica seu <abbr title="Índice de Massa Corporal">IMC</abbr>.</p>
+                                <div class="project-techs">
+                                    <span class="project-techs__tag">Pyscript</span>
+                                    <span class="project-techs__tag">Python</span>
+                                    <span class="project-techs__tag">HTML</span>
+                                    <span class="project-techs__tag">Bootstrap</span>
+                                </div>
                                 <a href="https://aliine98.github.io/elasnatech-atividades/imc/index.html" target="_blank" rel="noopener" class="projects__link">Deploy</a>
                                 <a href="https://github.com/aliine98/elasnatech-atividades/tree/main/imc" target="_blank" rel="noopener" class="projects__secondary-link">Repositório</a>
                             </div>
                         </li>
                         <li class="projects__list-item swiper-slide">
-                            <img src="./src/assets/bootstrap-shots_so.webp" alt="Capa do projeto Layout com Bootstrap" width="100%" height="200" loading="lazy" class="projects__img">
+                            <img src="./src/assets/jogo-da-forca.webp" alt="Capa do projeto Calculadora de IMC" width="100%" height="200" loading="lazy" class="projects__img">
                             <div class="project-text-wrapper">
-                                <h3>Site com Bootstrap</h3>
-                                <p>Um exemplo de layout de site utilizando várias classes e componentes do bootstrap, combinado com um HTML bem
-                                    estruturado e um pouco de CSS.</p>
-                                <a href="https://aliine98.github.io/elasnatech-atividades/bootstrap/index.html" target="_blank" rel="noopener" class="projects__link">Deploy</a>
-                                <a href="https://github.com/aliine98/elasnatech-atividades/tree/main/bootstrap" target="_blank" rel="noopener" class="projects__secondary-link">Repositório</a>
+                                <h3>Jogo da Forca</h3>
+                                <p>Um jogo da forca que pode ser jogado em navegadores no pc e mobile, digitando com o próprio teclado ou com os botões na tela.</p>
+                                <div class="project-techs">
+                                    <span class="project-techs__tag">Javascript</span>
+                                    <span class="project-techs__tag">HTML</span>
+                                    <span class="project-techs__tag">CSS</span>
+                                </div>
+                                <a href="https://aliine98.github.io/Jogo-da-Forca/" target="_blank" rel="noopener" class="projects__link">Deploy</a>
+                                <a href="https://github.com/aliine98/Jogo-da-Forca" target="_blank" rel="noopener" class="projects__secondary-link">Repositório</a>
                             </div>
                         </li>
                     </ul>
