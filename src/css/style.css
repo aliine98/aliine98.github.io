@@ -212,7 +212,8 @@ body,
 .header__nav-list a,
 .credits__list a,
 .certificates-list__item-link,
-.about-me__description a {
+.about-me__description a,
+.mks-api-link {
     color: var(--light-font);
     transition: color .4s;
 }
@@ -231,7 +232,8 @@ body,
 .credits__list a:is(:hover, :focus),
 .scroll-to-top:is(:hover, :focus),
 .certificates-list__item-link:is(:hover, :focus),
-.about-me__description a:is(:hover, :focus) {
+.about-me__description a:is(:hover, :focus),
+.mks-api-link:is(:hover, :focus) {
     color: var(--hover-primary-color);
 }
 
@@ -453,8 +455,9 @@ body,
     display: grid;
     grid-row-gap: 1rem;
     letter-spacing: 2px;
-    min-width: 250px;
     padding: 1rem 3rem;
+    text-align: center;
+    width: 280px;
     place-items: center;
     text-transform: uppercase;
     transition: all 1s;
@@ -501,6 +504,10 @@ body,
 
 .skills--bootstrap::before {
     background: url("../assets/Bootstrap.svg") no-repeat center / contain;
+}
+
+.skills--styled::before {
+    background: url("../assets/StyledComponents.svg") no-repeat center / contain;
 }
 
 .skills--python::before {
@@ -795,6 +802,10 @@ body.light,
 
 .light .certificates__list li:hover {
     background: var(--card-dark-background);
+}
+
+.light .project-techs__tag {
+    background: var(--dark-font);
 }
 
 .light .contact__form {
