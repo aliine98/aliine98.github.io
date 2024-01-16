@@ -213,9 +213,7 @@ body,
 .credits__list a,
 .certificates-list__item-link,
 .about-me__description a,
-.mks-api-link,
-.blog-api-link,
-.weather-api-link {
+.projects-tertiary-link {
     color: var(--light-font);
     transition: color .4s;
 }
@@ -235,7 +233,7 @@ body,
 .scroll-to-top:is(:hover, :focus),
 .certificates-list__item-link:is(:hover, :focus),
 .about-me__description a:is(:hover, :focus),
-.mks-api-link:is(:hover, :focus) {
+.projects-tertiary-link:is(:hover, :focus) {
     color: var(--hover-primary-color);
 }
 
