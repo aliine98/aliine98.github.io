@@ -213,7 +213,9 @@ body,
 .credits__list a,
 .certificates-list__item-link,
 .about-me__description a,
-.mks-api-link {
+.mks-api-link,
+.blog-api-link,
+.weather-api-link {
     color: var(--light-font);
     transition: color .4s;
 }
@@ -510,14 +512,22 @@ body,
     background: url("../assets/StyledComponents.svg") no-repeat center / contain;
 }
 
-.skills--python::before {
-    background: url("../assets/Python-Dark.svg") no-repeat center / contain;
+.skills--tailwind::before {
+    background: url("../assets/TailwindCSS-Dark.svg") no-repeat center / contain;
+}
+
+.skills--react::before {
+    background: url("../assets/React-Dark.svg") no-repeat center / contain;
 }
 
 /* Projects */
 
 .swiper {
-    width: 90%;
+    width: 100%;
+}
+
+.projects-container.swiper {
+    padding: 20px;
 }
 
 .projects__list-item {
@@ -835,7 +845,7 @@ body.light,
     }
 
     .projects__img {
-        height: 80%;
+        height: 90%;
     }
 
     .credits__list {
@@ -946,10 +956,6 @@ body.light,
     .skills__item::before {
         height: 50px;
         width: 50px;
-    }
-
-    .projects__img {
-        height: 80%;
     }
 
     .credits__list {

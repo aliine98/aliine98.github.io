@@ -29,5 +29,6 @@ function initSwiperCarousel(autoplayValue) {
         autoplay: autoplayValue,
         rewind: true,
         keyboard: true,
+        autoHeight: true
     });
 }
